@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sardor Lavash - Fast Food</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fffbeb;
+            color: #333;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background-color: #b91c1c;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #fef08a;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #fef08a;
+        }
+
+        .back-btn {
+            background-color: #fef08a;
+            color: #b91c1c;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #fde047;
+        }
+
+        /* MAHSULOTLAR QISMI */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-header {
+            margin-bottom: 25px;
+        }
+
+        .section-header h2 {
+            font-size: 28px;
+            color: #b91c1c;
+        }
+
+        .menu-container {
+            display: flex;
+            gap: 25px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding-bottom: 20px;
+        }
+
+        .menu-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .menu-container::-webkit-scrollbar-thumb {
+            background-color: #fca5a5;
+            border-radius: 4px;
+        }
+
+        /* CARD STYLI */
+        .food-card {
+            flex: 0 0 280px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .food-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .food-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .food-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .food-card h3 {
+            font-size: 18px;
+            color: #111827;
+            margin-bottom: 8px;
+        }
+
+        .food-card .desc {
+            font-size: 13px;
+            color: #6b7280;
+            margin-bottom: 15px;
+        }
+
+        .food-card .price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #b91c1c;
+            margin-bottom: 20px;
+            margin-top: auto;
+        }
+
+        .order-btn {
+            display: block;
+            width: 100%;
+            background-color: #b91c1c;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .order-btn:hover {
+            background-color: #991b1b;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="#" class="logo">SARDOR LAVASH</a>
+        <ul class="nav-links">
+            <li><a href="#">Bosh sahifa</a></li>
+            <li><a href="#">Menyu</a></li>
+            <li><a href="#">Aksiyalar</a></li>
+            <li><a href="#">Aloqa</a></li>
+        </ul>
+        <a href="#" class="back-btn">Asosiy sahifaga</a>
+    </nav>
+
+    <!-- MENYU SLAYDERI -->
+    <div class="container">
+        <div class="section-header">
+            <h2>Mazali Fast Food Mahsulotlari</h2>
+        </div>
+
+        <div class="menu-container">
+            <div class="food-card">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80" alt="Lavash">
+                <div class="food-content">
+                    <h3>Mol Go'shtli Lavash</h3>
+                    <p class="desc">Maxsus sous, pishloq, bodring va sharqona tansiq go'sht.</p>
+                    <p class="price">35 000 so'm</p>
+                    <a href="#" class="order-btn">Buyurtma berish</a>
+                </div>
+            </div>
+
+            <div class="food-card">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" alt="Burger">
+                <div class="food-content">
+                    <h3>Double Burger</h3>
+                    <p class="desc">Ikki qavatli go'shtli kotlet, chedar pishloqi va fresh sabzavotlar.</p>
+                    <p class="price">42 000 so'm</p>
+                    <a href="#" class="order-btn">Buyurtma berish</a>
+                </div>
+            </div>
+
+            <div class="food-card">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80" alt="Pizza">
+                <div class="food-content">
+                    <h3>Pepperoni Pitsa</h3>
+                    <p class="desc">Mol go'shtidan kolbasa, mozzarella pishloqi va maxsus pomidor sousi.</p>
+                    <p class="price">75 000 so'm</p>
+                    <a href="#" class="order-btn">Buyurtma berish</a>
+                </div>
+            </div>
+
+            <div class="food-card">
+                <img src="https://images.unsplash.com/photo-1585109649139-366815a0d713?auto=format&fit=crop&w=600&q=80" alt="Hot Dog">
+                <div class="food-content">
+                    <h3>Klassik Xot-Dog</h3>
+                    <p class="desc">Sosiska, yumshoq bulochka, ketchup, mayonez va xantal.</p>
+                    <p class="price">18 000 so'm</p>
+                    <a href="#" class="order-btn">Buyurtma berish</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

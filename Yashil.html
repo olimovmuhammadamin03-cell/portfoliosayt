@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yashil Restorani</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9fafb;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .navbar {
+            background-color: #166534;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+        }
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #facc15;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .menu-grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            width: 280px;
+            flex-grow: 1;
+        }
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card h3 {
+            margin: 0 0 10px 0;
+            color: #166534;
+        }
+        .price {
+            font-weight: bold;
+            color: #d97706;
+            margin-bottom: 15px;
+        }
+        .order-btn {
+            display: block;
+            width: 100%;
+            background-color: #166534;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .order-btn:hover {
+            background-color: #14532d;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="logo">YASHIL RESTORANI</a>
+    </nav>
+
+    <div class="container">
+        <h2>Bizning taomlarimiz</h2>
+        <div class="menu-grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Kabob">
+                <div class="card-content">
+                    <h3>Maxsus Kabob</h3>
+                    <p class="price">85 000 so'm</p>
+                    <a href="#" class="order-btn">Buyurtma berish</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80" alt="Steak">
+                <div class="card-content">
+                    <h3>Gril Steyk</h3>
+                    <p class="price">120 000 so'm</p>
+                    <a href="#" class="order-btn">Buyurtma berish</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iskander Buildings</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background-color: #0f172a;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #f59e0b;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f59e0b;
+        }
+
+        .contact-btn {
+            background-color: #f59e0b;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .contact-btn:hover {
+            background-color: #d97706;
+        }
+
+        /* LOYIHALAR QISMI */
+        .products-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-header {
+            margin-bottom: 25px;
+        }
+
+        .section-header h2 {
+            font-size: 28px;
+            color: #0f172a;
+        }
+
+        /* CARDLAR KONTЕYNERI */
+        .products-container {
+            display: flex;
+            gap: 25px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding-bottom: 20px;
+        }
+
+        .products-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .products-container::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        /* CARD STYLI */
+        .product-card {
+            flex: 0 0 280px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .product-card-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-card h3 {
+            font-size: 18px;
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+
+        .product-card .location {
+            font-size: 13px;
+            color: #64748b;
+            margin-bottom: 12px;
+        }
+
+        .product-card .price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #f59e0b;
+            margin-bottom: 20px;
+            margin-top: auto;
+        }
+
+        .buy-btn {
+            display: block;
+            width: 100%;
+            background-color: #0f172a;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .buy-btn:hover {
+            background-color: #f59e0b;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="#" class="logo">ISKANDER BUILDINGS</a>
+        <ul class="nav-links">
+            <li><a href="#">Bosh sahifa</a></li>
+            <li><a href="#">Loyihalar</a></li>
+            <li><a href="#">Kompaniya haqida</a></li>
+            <li><a href="#">Aloqa</a></li>
+        </ul>
+        <a href="#" class="contact-btn">Bog'lanish</a>
+    </nav>
+
+    <!-- LOYIHALAR SLAYDERI -->
+    <section class="products-section">
+        <div class="section-header">
+            <h2>Iskander Buildings Loyihalari</h2>
+        </div>
+
+        <div class="products-container">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=600&q=80" alt="Mezbon">
+                <div class="product-card-content">
+                    <h3>Mezbon Majmuasi</h3>
+                    <p class="location">Toshkent sh., Yunusobod tumani</p>
+                    <p class="price">34 m² dan boshlab</p>
+                    <a href="#" class="buy-btn">Batafsil</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80" alt="Mavrid">
+                <div class="product-card-content">
+                    <h3>Mavrid Mavzesi</h3>
+                    <p class="location">Toshkent shahri</p>
+                    <p class="price">35 m² dan boshlab</p>
+                    <a href="#" class="buy-btn">Batafsil</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&w=600&q=80" alt="Megapolis">
+                <div class="product-card-content">
+                    <h3>Megapolis</h3>
+                    <p class="location">Zarafshon shahri</p>
+                    <p class="price">Topshirilgan loyiha</p>
+                    <a href="#" class="buy-btn">Batafsil</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Business Center">
+                <div class="product-card-content">
+                    <h3>Iskander Business</h3>
+                    <p class="location">Toshkent shahri</p>
+                    <p class="price">Tijorat binolari</p>
+                    <a href="#" class="buy-btn">Batafsil</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
